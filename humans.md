@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Francisco Emiliano Figueroa ([figueroafe](https://github.com/figueroafe))
+* XXX ([jonatanMedrano](https://github.com/jonatanMedrano))
