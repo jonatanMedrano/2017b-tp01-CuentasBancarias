@@ -8,4 +8,4 @@
 ## Estudiantes
 
 * Francisco Emiliano Figueroa ([figueroafe](https://github.com/figueroafe))
-* XXX ([jonatanMedrano](https://github.com/jonatanMedrano))
+* Jonatan Medrano ([jonatanMedrano](https://github.com/jonatanMedrano))
