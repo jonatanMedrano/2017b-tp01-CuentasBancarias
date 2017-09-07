@@ -40,6 +40,18 @@ public class CuentaBancariaTest {
 		//Compruebo que el saldo quede en 0 en la cuenta de origen
 		Assert.assertEquals(100,cuentaDestino.consultarSaldo(),0);
 	}
+	
+	/**
+	 * Compruebo que el no se realiza transferencia si el saldo no es suficiente
+	 */
+	@Test
+	public void queElSaldoSeaInsuficiente(){
+		//Tranfiero todo el saldo a la cuenta destino
+		cuentaOrigen.transferenciaBancaria(150, cuentaDestino);
+		
+		//Compruebo que el saldo quede en 0 en la cuenta de origen
+		Assert.assertEquals(10,cuentaDestino.consultarSaldo(),0);
+	}
 
 	
 }
