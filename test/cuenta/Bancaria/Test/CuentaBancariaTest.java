@@ -34,10 +34,8 @@ public class CuentaBancariaTest {
 	 */
 	@Test
 	public void queSeAcreditoElSaldo(){
-		//Tranfiero todo el saldo a la cuenta destino
 		cuentaOrigen.transferenciaBancaria(90, cuentaDestino);
 		
-		//Compruebo que el saldo quede en 0 en la cuenta de origen
 		Assert.assertEquals(100,cuentaDestino.consultarSaldo(),0);
 	}
 	
@@ -46,11 +44,21 @@ public class CuentaBancariaTest {
 	 */
 	@Test
 	public void queElSaldoSeaInsuficiente(){
-		//Tranfiero todo el saldo a la cuenta destino
 		cuentaOrigen.transferenciaBancaria(150, cuentaDestino);
 		
-		//Compruebo que el saldo quede en 0 en la cuenta de origen
 		Assert.assertEquals(10,cuentaDestino.consultarSaldo(),0);
+	}
+
+	/**
+	 * Comprobacion de acreditacion y debito
+	 */
+	@Test
+	public void mismaDiferenciaEntreOrigenYDestino(){
+		cuentaOrigen.transferenciaBancaria(50, cuentaDestino);
+		
+		Assert.assertEquals(60,cuentaDestino.consultarSaldo(),0);
+		Assert.assertEquals(50,cuentaOrigen.consultarSaldo(),0);
+
 	}
 
 	
