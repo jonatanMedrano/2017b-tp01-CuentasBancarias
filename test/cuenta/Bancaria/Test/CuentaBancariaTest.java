@@ -29,7 +29,17 @@ public class CuentaBancariaTest {
 		Assert.assertEquals(0,cuentaOrigen.consultarSaldo(),0);
 	}
 
-
+	/**
+	 * Compruebo que el saldo se ha acreditado
+	 */
+	@Test
+	public void queSeAcreditoElSaldo(){
+		//Tranfiero todo el saldo a la cuenta destino
+		cuentaOrigen.transferenciaBancaria(90, cuentaDestino);
+		
+		//Compruebo que el saldo quede en 0 en la cuenta de origen
+		Assert.assertEquals(100,cuentaDestino.consultarSaldo(),0);
+	}
 
 	
 }
