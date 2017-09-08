@@ -28,7 +28,7 @@ public class CuentaBancaria {
 	}
 	
 	/**
-	 * Muestra el salto actual
+	 * Muestra el saldo actual
 	 * @return
 	 */
 	public double consultarSaldo(){
