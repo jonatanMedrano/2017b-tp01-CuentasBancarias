@@ -74,6 +74,21 @@ public class CuentaBancariaTest {
 		Assert.assertEquals(10,cuentaDestino.consultarSaldo(),0);
 		Assert.assertEquals(100_500,cuentaTres.consultarSaldo(),0);
 	}
+	
+	/**
+	 * 
+	 * Verifica que no se hagan transferencias entre cuentas con mismo numero
+	 * 
+	 */
+	@Test
+	public void transferenciaConMismoNumeroDeCuenta() {		
+		
+		CuentaBancaria cuentaTres = new CuentaBancaria(87654321, 100);
+		cuentaTres.transferenciaBancaria(100, cuentaDestino);
+
+		Assert.assertEquals(10,cuentaDestino.consultarSaldo(),0);
+
+	}
 
 }
 
