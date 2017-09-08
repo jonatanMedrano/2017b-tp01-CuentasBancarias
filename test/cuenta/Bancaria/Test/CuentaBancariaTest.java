@@ -68,10 +68,12 @@ public class CuentaBancariaTest {
 	@Test
 	public void verificoQueNoSeTransfieraMasDe100000PesosPorDia() {		
 		
-		CuentaBancaria cuentaTres = new CuentaBancaria(99999999, 100500);
-		cuentaTres.transferenciaBancaria(100500, cuentaDestino);
+		CuentaBancaria cuentaTres = new CuentaBancaria(99999999, 100_500);
+		cuentaTres.transferenciaBancaria(100_500, cuentaDestino);
 
 		Assert.assertEquals(10,cuentaDestino.consultarSaldo(),0);
+		Assert.assertEquals(100_500,cuentaTres.consultarSaldo(),0);
 	}
 
 }
+
