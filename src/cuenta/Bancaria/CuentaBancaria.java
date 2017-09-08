@@ -23,10 +23,12 @@ public class CuentaBancaria {
 	 */
 
 	public void transferenciaBancaria(double monto, CuentaBancaria cuentaDestino) {
-		if (monto < 100000) {
-			if (this.saldo >= monto) {
-				cuentaDestino.saldo += monto;
-				this.saldo -= monto;
+		if (this.numeroCuenta != cuentaDestino.numeroCuenta) {
+			if (monto < 100000) {
+				if (this.saldo >= monto) {
+					cuentaDestino.saldo += monto;
+					this.saldo -= monto;
+				}
 			}
 		}
 	}
